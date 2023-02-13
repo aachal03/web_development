@@ -1,0 +1,70 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+
+    <style>
+      div {
+        background-color: rgb(206, 206, 242);
+        height: 100px;
+        width: 180px;
+        border-radius: 37%;
+        text-align: center;
+        line-height: 100px;
+        /* margin: auto; */
+        animation-name: ChangeColor;
+        animation-duration: 5s;
+        animation-fill-mode: forwards;
+      }
+
+      #d1 {
+        height: 100px;
+        width: 100px;
+        animation-name: ChangeColor2;
+        margin: auto;
+      }
+
+      @keyframes ChangeColor2 {
+        /* from{
+            background-color: rgb(220, 150, 53);
+            color: rgb(240, 149, 149); 
+        } */
+        to{
+            background-color: rgb(128, 233, 102);
+        }
+      }
+
+      @keyframes ChangeColor {
+        from {
+          background-color: rgb(6, 31, 46);
+          color: rgb(252, 246, 246);
+          height: 400px;
+          width: 385px;
+           animation-delay: 1s;
+        }
+
+        to {
+          transform: translateX(125px);
+          animation-delay: 1s;
+          height: 200px;
+          width: 380px;
+          /* transform: rotate(25deg); */
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <!-- <h1>welcome</h1> -->
+      <div id="d1">
+        <h3>To India</h3>
+      </div>
+    </div>
+  </body>
+</html>

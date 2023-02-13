@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moving Car</title>
+    <!-- <link rel="stylesheet" href="mc1.css"> -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .sky {
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            background-image: url("70199.jpg");
+            position: relative;
+            overflow: hidden;
+        }
+
+
+        .city {
+            background-image: url("/3042.jpg");
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            position: relative;
+            /* animation: bg 5s linear infinite; */
+        }
+
+        @keyframes bg {
+            0% {
+                background-position: 0px;
+            }
+
+            100% {
+                background-position: 500%;
+            }
+        }
+
+        .car {
+            background-image: url("car1.png");
+            width: 350px;
+            height: 200px;
+            background-repeat: no-repeat;
+            position: absolute;
+            bottom: 0px;
+            right: -500px;
+            animation: animate linear 3s infinite;
+        }
+
+        @keyframes animate {
+            100% {
+                transform: translateX(-500%);
+            }
+        }
+
+        .wheel1 img {
+            width: 77px;
+            position: absolute;
+            top: 105px;
+            left: 55px;
+           animation: wheelrotate 1s linear infinite;
+        }
+
+        .wheel2 img {
+            width: 77px;
+            position: absolute;
+            top: 105px;
+            right: 25px;
+            animation: wheelrotate 1s linear infinite;
+        }
+
+        @keyframes wheelrotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sky">
+        <div class="city">
+
+            <div class="car">
+
+                <div class="wheel1">
+                    <img src="Car_Animation_Img/wheel.png" alt="" />
+                    
+                </div>
+
+                <div class="wheel2">
+                    <img src="Car_Animation_Img/wheel.png" alt="" />
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
