@@ -8,6 +8,7 @@
 
 :root{
     --green: rgb(28, 230, 93);
+    --black: rgb(7, 7, 41);
 }
 header{
     /* position: fixed; */
@@ -20,18 +21,18 @@ header{
     padding: 0 10%;
 }
 header .nav1{
-    background-color:rgba(28, 230, 92);
-    padding: 5px 0;
+    background-color: var(--green);
     width: 100%;
 }
 header .nav1 .container{
-      display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 50px;
 }
 header .nav1 .logo{
-    font-size: 24px;
+    /* padding-left: 4px; */
+    font-size: 30px;
     font-weight: bold;
     color: white;
 }
@@ -52,4 +53,34 @@ header .nav1 .search .fas{
     position: absolute;
     right: 10px;
     top: 7px;
+}
+
+header .nav2{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10%;
+    background-color:var(--black);
+}
+
+header .nav2 .navbar{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header .nav2 .navbar li a{
+    color: white;
+    text-decoration: none;
+}
+
+header .nav2 .navbar li a:hover .icons li:hover{
+    color: var(--green);
+}
+
+header .nav2 .icons{
+    display: flex;
+    gap: 8px;
+    list-style-type: none;
+    color: white;
 }
