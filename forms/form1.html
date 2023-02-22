@@ -31,27 +31,47 @@
 
         form {
             display: grid;
-            grid-template-columns: auto; 
+            grid-template-columns: auto;
             grid-template-rows: auto;
             width: 570px;
             row-gap: 10px;
             margin: auto;
         }
 
-        .f2{
+        .f2 {
             display: flex;
+            gap: 2px;
             width: 18px;
         }
 
-    
-            input, #select, textarea{
-                width: 475px;
-                height: 30px;
-            }
+        #select {
+            width: 250px;
+            height: 25px;
+            background-color: white;
+            border: 1px solid gray;
+            outline: none;
+        }
 
-            button{
-                width: 250px;
-            }
+        textarea{
+            width: 475px;
+        }
+        input {
+            width: 475px;
+            height: 30px;
+        }
+
+        button {
+            margin-top: 5px;
+            margin-left: 15px;
+            width: 450px;
+            height: 30px;
+            color: white;
+            font-size: 0.98rem;
+            outline: none;
+            border: none;
+            background-color: rgb(42, 158, 42);
+            align-content: center;
+        }
     </style>
 
 </head>
@@ -74,32 +94,32 @@
             <select name="Course" id="select">
                 <option value="Web Developmet">Web Developmet</option>
                 <option value="Computer Networks">Computer Networks</option>
-            </select> 
+            </select>
 
             <label for="Gender">Gender</label>
             <div class="f2">
-            <input type="radio" name="Gender" value="Female" />
-            <label for="Female">Female</label>
-            <input type="radio" name="Gender" value="Male" /><label for="Male">Male</label>
-            <input type="radio" name="Gender" value="Transgender" /><label for="Female">Transgender</label>
+                <input type="radio" name="Gender" value="Female" />
+                <label for="Female">Female</label>
+                <input type="radio" name="Gender" value="Male" /><label for="Male">Male</label>
+                <input type="radio" name="Gender" value="Transgender" /><label for="Female">Transgender</label>
             </div>
 
             <label for="PhoneNumber">PhoneNumber</label>
-            <input type="number" name="PhoneNumber" placeholder="PhoneNumber">
+            <input type="text" name="PhoneNumber" placeholder="PhoneNumber">
 
             <label for="Address">Current Address </label>
-            <textarea name="Address" id="textarea" cols=10" rows="4" placeholder="Current Address"></textarea>
+            <textarea name="Address" id="textarea" cols="1" rows="5" placeholder="Current Address"></textarea>
 
             <label for="Email"> Email</label>
             <input type="email" name="Email" placeholder="Enter Email">
-           
+
             <label for="Password">Password</label>
             <input type="password" name="Password" placeholder="Password">
 
             <label for="Password">Re-Type Password</label>
             <input type="Password" name="Password" placeholder="Re-Type Password">
 
-            <button>Register</button>
+            <button type="button">Register</button>
 
 
 
