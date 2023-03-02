@@ -39,8 +39,69 @@
             document.write("<br>")
             document.write(e[i])
         }
+        document.write("<br>")
+        document.write("<br>")
     
 
+        //functions on array
+        //1. concat
+
+        let a1=[1,2,3,4]
+        let a2=[8,"hh",6, "yy"]
+
+        let a3= a1.concat(a2);
+        document.write(a3 + "<br>")
+        document.write("<hr>")
+
+
+        //2. push
+        a1.push("iuhydihlf")
+        document.write("<br> Push element in array " +a1 + "<br>");
+        document.write("<hr>")
+        
+
+        //3. pop
+        document.write("<br> " + a2 + "<br> ")
+        a2.pop()
+        document.write(a2 + "<br>")
+        document.write("<hr>")
+
+
+        // 4. entries
+        var Array =[0,1,2, "kshfk", "ij"]
+        document.write("<br>" + Array + "<br>")
+        document.write("<br>")
+       let itr = Array.entries();
+
+        //for of loop
+        for(let x of itr)
+        {
+            document.write(x + "<br>")
+        }
+
+       document.write("<br> array emp itrate <br>")
+        var em=[1, "hh", 9868]
+        for (var n1 of em.entries())
+        {
+           document.write(n1 + "<br>")
+        }
+
+
+        var ef=[1, 55, 66, 1]
+        //document.write(typeof(ef[2]))
+
+        var q = ef.sort(
+            function compare(d,g)
+            {
+                return d-g;
+            }
+        )
+        document.write(q)
+        //console.log(ef)
+
+        // document.write("<br>" + ef)
+        
+        
     </script>
 
 </body>

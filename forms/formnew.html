@@ -4,53 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Facebook Login</title>
 
-    <style>
-        div{
-            margin-left: auto;
-            margin-right: auto;
-            max-width: 1150px;
-        }
-        .container{
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            grid-column: 250px 250px;
-            grid-gap: 20px;
-        }
-
-        form{
-            display: grid;
-            grid-template-columns: 1ftr 1fr;
-        }
-        img{
-            height: 250px;
-            width: 380px;
-        }
-
-    </style>
+    <link rel="stylesheet" href="fb_login.css">
 </head>
 <body>
-    <div>
-        <div class="container">
+    <div class="container">
+        <div class="content">
+            <img src="/facebook-logo1.png" alt="">
+            <h1>Facebook</h1>
+        </div>
+
+        <div class="form1">
             <form action="">
-                <label for="Username"> Username</label>
-                <input type="text" name="Username" id="" placeholder="Username">
-
-                <label for="Email">Email Id</label>    
-                <input type="email" name="Email" id="" placeholder="Email Id">
-
+                <label for="email">Email</label>
+                <input type="email" name="Email" placeholder="Email">
+                
                 <label for="password">Password</label>
-                <input type="password" name="password" id="" placeholder="password">
-
-                <button>Sign Up</button>
-
+                <input type="password" name="Password" placeholder="Password">
+                <button id="login" type="button">Login</button>
+                <button id="fp" type="button"> Forgot Password </button>
             </form>
-
-            <img src="/Animation/70199.jpg" alt="">
         </div>
     </div>
-
-
 </body>
 </html>
