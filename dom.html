@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+</head>
+
+<body>
+
+    <form name="form1">
+        <input type="text" name="nam" placeholder="Enter your name">
+        <button onclick="check()" value="print">print</button>
+
+    </form>
+
+    <script>
+        function check() {
+            var num1 = document.form1.nam.value;
+            alert("Welcome " + num1)
+        }
+    </script>
+</body>
+
+</html>
