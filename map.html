@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map in js</title>
+  </head>
+  <body>
+    <script>
+      var map = new Map();
+      map.set(1, "a");
+      map.set(2, "ab");
+      map.set(3, "abc");
+      map.set(4, "boat");
+
+      for (var s1 of map) {
+        document.write("<br>" + s1);
+      }
+
+      //size of map
+      document.write(" <br> Size of map is : " + map.size);
+
+      //delete one record from map
+      map.delete(3);
+      document.write("<br>map after deleting record ");
+      for (var s2 of map) {
+        document.write("<br>" + s2);
+      }
+
+      //entries
+      document.write("<br>");
+
+      var itr = map.entries();
+      for (let i = 0; i < map.size; i++) {
+        document.write("<br>" + itr.next().value);
+      }
+
+      //clear entire map
+      map.clear();
+      document.write("<br> size of map " + map.size);
+      document.write("<br>");
+
+      var map1 = new Map();
+      map1.set(1, "hydrogen");
+      map1.set(2, "helium");
+      map1.set(3, "litium");
+      map1.set(4, "berylium");
+
+      for (var s3 of map1) {
+        document.write("<br>" + s3);
+      }
+      document.write("<br>");
+      document.write("<br>");
+
+      //fetch all entires
+      function disp(key, values) {
+        document.write(key + " " + values + "<br>");
+      }
+
+      map1.forEach(disp);
+
+      //get
+      document.write("<br>" + map1.get(2));
+
+      //set
+    </script>
+  </body>
+</html>

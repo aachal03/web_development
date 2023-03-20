@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function</title>
+</head>
+<body>
+    
+
+    
+    <script>
+        //function expression without function name
+
+        let x=function(){
+            document.write("hello")
+        }
+        x();
+
+        //arrow function
+        let y =()=>{
+            document.write("<br> hydrogen is the first element ");
+        }
+        y();
+        
+        let z=()=>{
+            return 2+3;
+        }
+        document.write("<br> " + z())
+
+        let p1=(x,y)=>{
+            document.write( "<br>sub " + (x-y))
+        }
+        p1(5,4);
+
+        let p2=(a,b)=>{
+            return (a*b);
+        }
+        document.write("<br> mul " + p2(6,5))
+
+        //arrow function as a exprssion
+        
+
+    </script>
+</body>
+</html>
