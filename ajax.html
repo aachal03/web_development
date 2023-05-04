@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Click on the button to load result</p>
+
+    <div id="s1" style="background-color: blue">Somthing</div>
+
+    <input type="button" id="d1" value="LOad Data" />
+
+    <script>
+      $(document).ready(function () {
+        $("#d1").click(function (event) {
+          $.ajaxSetup({
+            url: "Result.html",
+          });
+
+          $.ajax({
+            success: function (data) {
+              $("#s1").html(data);
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

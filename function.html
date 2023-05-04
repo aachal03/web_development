@@ -1,71 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Function in Javascript</title>
-</head>
-<body>
+  </head>
+  <body>
     <script>
-        //Function Type 1: Default function without return type
+      //Function Type 1: Default function without return type
 
-        function print()
-        {
-            document.write("Welcome.. <br>");
-        }
-           
-        //The function needs to be called to display on the browser/ console
-        print();
-        //The function can be called multiple times        
-        print();
-        print();
+      function print() {
+        document.write("Welcome.. <br>");
+      }
 
-        function add()
-        {
-            var x=1; y=3;
-            document.write("Addition : " + (x+y) + "<br>")
-            document.write("<br>")
-        }
+      //The function needs to be called to display on the browser/ console
+      print();
+      //The function can be called multiple times
+      print();
+      print();
 
-        print();
-        add();
-       
-        //Function Type 2: Default function with return type
-        function pr()
-        {
-            return "Default function with return type <br>";
-        }
+      function add() {
+        var x = 1;
+        y = 3;
+        document.write("Addition : " + (x + y) + "<br>");
+        document.write("<br>");
+      }
 
-        var str=pr()
-        document.write(str)
+      print();
+      add();
 
-        function add_1()
-        {
-            var m=5,n=5;
-            m+=n;
-            return "<br> Addition: " + m;
-        }
+      //Function Type 2: Default function with return type
+      function pr() {
+        return "Default function with return type <br>";
+      }
 
-        var num=add_1();
-        document.write(num);
+      //to print something, first store the function in a var and then print the var.
+      var str = pr();
+      document.write(str);
 
-        //Function Type 3: parameterized function without return type
-        function mul(x , y)
-        {
-            document.write("<br> Multiplication :" + x*y + "<br>");
-        }
-        mul(5,40);
+      function add_1() {
+        var m = 5,
+          n = 5;
+        m += n;
+        return "<br> Addition: " + m;
+      }
 
-        //Function Type 4: parameterized function with return type
-        function sub(a , b)
-        {
-            return "<br> Subtraction is " + a-b + "<br>"
-        }
-        sub(4,2)
-        document.write(sub);
+      var num = add_1();
+      document.write(num);
 
+      //Function Type 3: parameterized function without return type
+      function mul(x, y) {
+        document.write("<br> Multiplication :" + (x * y) + "<br>");
+      }
+      mul(5, 40);
+
+      //Function Type 4: parameterized function with return type
+      function sub(a, b) {
+        return "<br> Subtraction is " + (a - b) + "<br>";
+      }
+      sub(4, 2);
+      document.write(sub);
     </script>
-
-</body>
+  </body>
 </html>

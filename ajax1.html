@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <h2>Sending form</h2>
+        <label for="NAme: ">NAme :</label>
+        <input type="text" name="name" id="name" placeholder="EnterNAme"> <br><br>
+        <label for="EMail: ">Email :</label>
+        <input type="text" name="email" id="email" placeholder="EnterEmail"> <br><br>
+        <button id="btn" onclick="btnClick()">Send</button>
+        <div id="root">Click on the send button to submit the FormData object</div>
+        </div>
+        <script>
+            let root = document.getElementById('root');
+            let name = document.getElementById("name");
+            let email = document.getElementById("email");
+            function btnClick() {
+                //form data Object
+                let formData = new FormData();
+                formData.append('name', name.value);
+                formData.append('email', email.value);
+                // Ajax
+                $.ajax({
+                    url: 'https://jsonplaceholder.typicode.com/posts',
+                    data: formData,
+                    type: 'POST',
+                    processData: false,
+                    contentType: false,
+                    success: function (data) {
+                        root.innerHTML = "FormData  Object send Successfully"
+                    },
+                    error: function (err) {
+                        root.innerHTML = "Faild to send the data";
+                    }
+                })
+            }
+        </script>
+    </body>
+
+</html>
