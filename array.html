@@ -1,147 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array & operations (1)</title>
-</head>
-<body>
-    <script>
-        let a=[1, "d", "aa", 8.9]
-       let b= a.length;
-        document.write("length is " + b + "<br>")
-        document.write(a[0] + "<br>");
-        document.write(a[1]  + "<br>");
-        document.write(a[2] + "<br>");
-        document.write(a[3] + "<br>");
-        // document.write(n[4]); 
-        
 
-        //Print numbers using array and for loop
-        var c=[n], n;
-        for(c[n]=0; c[n]<=8; c[n]++)
-        {
-            document.write("<br>")
-            document.write(c[n])
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array & operations (1)</title>
+    </head>
 
-        //ARRAY IS AN OBJECT
-        let num= new Array(4, "hh", 7, 8855647);
-        document.write(num[0] + "<br>" + num[1] + "<br>" + num[2] + "<br>" + num[3]+ "<br>");
+    <body>
+        <script>
+            let a = [1, "d", "aa", 8.9]
+            let b = a.length;
+            document.write("length is " + b + "<br>")
+            document.write(a[0] + "<br>");
+            document.write(a[1] + "<br>");
+            document.write(a[2] + "<br>");
+            document.write(a[3]);
+            // document.write(n[4]); 
+            document.write("<hr>")
+     <!---------------------------------------------------------------------------------------------------------------->
+            //Print numbers using array and for loop
+            var c = [n], n;
+            for (c[n] = 0; c[n] <= 8; c[n]++) {
 
-        document.write("<br>");
-        let e=[1, "Jane", 4000]
-        let len=e.length;
-        document.write("lenght is " + len)
-        for(let i=0; i<=2; i++)
-        {
-            document.write("<br>")
-            document.write(e[i])
-        }
-        document.write("<br>")
-        document.write("<br>")
-    
-
-        //functions on array
-        //1. concat
-
-        let a1=[1,2,3,4]
-        let a2=[8,"hh",6, "yy"]
-
-        let a3= a1.concat(a2);
-        document.write(a3 + "<br>")
-        document.write("<hr>")
-
-
-        //2. push
-        a1.push("iuhydihlf")
-        document.write("<br> Push element in array " +a1 + "<br>");
-        document.write("<hr>")
-        
-
-        //3. pop
-        document.write("<br> " + a2 + "<br> ")
-        a2.pop()
-        document.write(a2 + "<br>")
-        document.write("<hr>")
-
-
-        // 4. entries
-        var Array =[0,1,2, "kshfk", "ij"]
-        document.write("<br>" + Array + "<br>")
-        document.write("<br>")
-       let itr = Array.entries();
-
-        //for of loop
-        for(let x of itr)
-        {
-            document.write(x + "<br>")
-        }
-
-       document.write("<br> array emp itrate <br>")
-        var em=[1, "hh", 9868]
-        for (var n1 of em.entries())
-        {
-           document.write(n1 + "<br>")
-        }
-
-        //5. sort
-        var ef=[1, 55, 66, 1]
-        //document.write(typeof(ef[2]))
-        var q = ef.sort(
-            function compare(d,g)
-            {
-                return d-g;
+                document.write(c[n])
+                document.write("<br>")
             }
-        )
-        document.write(q)
-        document.write("<hr>")
-        //console.log(ef)
-        // document.write("<br>" + ef)
+            document.write("<hr>")
+            <!---------------------------------------------------------------------------------------------------------------->
+            //Array an oject
+            var num1 = new Array();
+            num1[0]= 54;
+            num1[1]= "lkuyh";
+            num1[2]= 2+9 ;
+            num1[3]= 88556;
+            console.log("length is " + num1.length);
+            document.write(num1[0] + "<br>" + num1[1] + "<br>" + num1[2] + "<br>" + num1[3] + "<br>");
+            document.write("<hr>")
+            <!---------------------------------------------------------------------------------------------------------------->
+            //ARRAY IS A constructor
+            var num = new Array(4, "hh", 7, 8855647);
+            document.write(num[0] + "<br>" + num[1] + "<br>" + num[2] + "<br>" + num[3] + "<br>");
+            document.write("<hr>")
+            <!---------------------------------------------------------------------------------------------------------------->
+            var e = [1, "Jane", 4000]
+            var len = e.length;
+            document.write("lenght is " + len)
+            for (var i = 0; i < len; i++) {
+                document.write("<br>")
+                document.write(e[i])
+            }
+            document.write("<br>")
+            document.write("<hr>")
 
-        //6. filter
+            document.write("<h3>functions on array </h3>")
+            //1. concat
+            var a1 = [1, 2, 3, 4]
+            var a2 = [8, "hh", 6, "yy"]
 
-        var mj=[3, 6, 44, 2039, 34]
-        function show(value)
-        {
-            return value>100;
-        }
-        document.write("Elements greater than 100 are " + mj.filter(show))
+            var a3 = a1.concat(a2);
+            document.write(a3 + "<br>")
+            document.write("<hr>")
+ <!----------------------------------------------------------------------------------------------------------------!>
+            //2. push
+            a1.push("iuhydihlf")
+            document.write("<br> Push element in array " + a1 + "<br>");
+            document.write("<hr>")
+ <!---------------------------------------------------------------------------------------------------------------->
+            //3. pop
+            document.write("<br> " + a2 + "<br> ")
+            var res= a2.pop()
+            document.write(a2 + "<br>" )
+            document.write("<br> ")
+            document.write("<hr>")
+ <!---------------------------------------------------------------------------------------------------------------->
+            // 4. entries
+            var Array = [0, 1, 2, "kshfk", "ij"]
+            document.write("<br>" + Array + "<br>")
+            document.write("<br>")
+            var itr = Array.entries();
+
+            //for of loop
+            for (var x of itr) {
+                document.write(x + "<br>")
+            }
+
+            document.write("<br> array emp itrate <br>")
+            var em = [1, "hh", 9868]
+            for (var n1 of em.entries()) {
+                document.write(n1 + "<br>")
+            }
+            document.write("<hr>")
+ <!---------------------------------------------------------------------------------------------------------------->
+            //5. sort
+            var ef = [1, 55, 66, 13]
+            var fe=["zz" , "dd" , "aa" , "kk", "cc"]
+            var ll= fe.sort();
+            document.write("<br> sorted array " + ll)
         
-        
-        // function sh(el, in, ar)
-        // {
-        //     return el<75;
-        // }
-        // document.write("Elements less than 75 are " + [92,42,67,89].filter(sh))
+            var q = ef.sort(
+                function compare(d, g) {
+                    return d - g;
+                }
+            )
+            document.write("<br> number array sotred" + q)
+            document.write("<hr>")
+            //console.log(ef)
+            // document.write("<br>" + ef)
 
-        //7. index of
-
-        let er=["fgs", 97, 866,"kju", 865]
-        document.write("<br> index of 97 is " + er.indexOf(97))
-        //document.write("<br> index of   " + er.indexOf("kju"))
-
-        //7.shift
-        const l=[12, "dsf", 456, 8246, "kof"]
-        document.write("<br> array before shift  " + l )
-        document.write("<br> shifting the first element out of the array " + l.shift())
-        document.write("<br> <b> Array after shift </b> " + l)
-        document.write("<br>")
-
-        //8. unshift
-        document.write("<hr>")
-        document.write("<br> Array before unshfit " + l)
-        l.unshift("Hello")
-        document.write(" <br> Enter word Hello in the array :" + " "+ l)
-        document.write("<br>")
-
-        //9. delete
-        var yq=[0, 8263, "hj", 244, "add"]
-        document.write("arrya before delete 244: " + " " + yq);
-
+            //6. filter
+            var mj = [3, 6, 44, 2039, 34]
+            function show(value) {
+                return value > 100;
+            }
+            document.write("Elements greater than 100 are " + mj.filter(show))
             
-    </script>
+            var jm = [40, 55 , 10, 8, 5]
+            var abc = jm.filter(function(value){
+                return (value % 2 == 0)
+            })
+            document.write("<br <h3> Numbers which are multiples of 2 :- </h3>" + abc)
 
-</body>
+            document.write("<hr>")
+            // function sh(el, in, ar)
+            // {
+            //     return el<75;
+            // }
+            // document.write("Elements less than 75 are " + [92,42,67,89].filter(sh))
+
+            //7. index of
+
+            var er = ["fgs", 97, 866, "kju", 865]
+            document.write("index of 865 is " + er.indexOf(865))
+
+            var res= er.findIndex(x=>x>97)
+            document.write("<br> index OF 97 " + res)
+            //document.write("<br> index of   " + er.indexOf("kju"))
+
+            //8.shift
+            const l = [12, "dsf", 456, 8246, "kof"]
+            document.write("<br> array before shift  " + l)
+            document.write("<br> shifting the first element out of the array " + l.shift())
+            document.write("<br> <b> Array after shift </b> " + l)
+            document.write("<br>")
+
+            //9. unshift
+            document.write("<hr>")
+            document.write("Array before unshfit " + l)
+            l.unshift("<b> Hello </b>")
+            document.write(" <br> Enter word Hello in the array :" + " " + l)
+            document.write("<br>")
+
+            //10. delete
+            var yq = [0, 8263, "hj", 244, "add"]
+            document.write("arrya before delete 244: " + " " + yq);
+
+
+        </script>
+
+    </body>
+
 </html>

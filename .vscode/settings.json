@@ -1,0 +1,7 @@
+{
+  "css.format.braceStyle": "expand",
+  "html.format.indentInnerHtml": true,
+  "html.format.maxPreserveNewLines": 70,
+  "html.format.wrapAttributes": "force",
+  "html.format.wrapLineLength": 100
+}

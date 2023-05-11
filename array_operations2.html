@@ -1,38 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array & operations(2)</title>
-</head>
-<body>
-<script>
-    //10. splice
-    const a=["jan", "feb" , "june", "july"]
-    document.write("Array before splice : -  " + a)
-    document.write("<br>")
 
-    a.splice(2, 0, "march" , "april" , "may")
-    document.write("Array after splice : -  " + a)
-    document.write("<br>")
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Array & operations(2)</title>
+    </head>
 
-    var b=a.splice(1);
-    document.write("splice element: " +  b + "<br>")
-    document.write("array after splice:  " + a)
-    
-    document.write("<hr>")
-    
-    //11. slice --not clear
-    const c=[" Aug" , "Sept", "Oct", "Nov"]
-    document.write("Array before slice : -  " + c)
-    document.write("<br>")
-
-    d=c.slice(1) //????
-    document.write("slice element : -  " + d)
-    document.write("<br>")
-</script>
+    <body>
 
 
-</body>
+        <script>
+            //11. splice- add or remove elemets from a specific location.
+            const a = ["jan", "feb", "june", "july"]
+            document.write("Array before splice : -  " + a)
+            document.write("<br>")
+
+            a.splice(2, 0, "march", "april", "may")
+            document.write("Array after splice : -  " + a)
+            document.write("<br>")
+
+            var b = a.splice(1);
+            document.write("splice element: " + b + "<br>")
+            document.write("array after splice:  " + a)
+
+            document.write("<hr>")
+
+            //12. slice --not clear
+            const c = [" Aug", "Sept", "Oct", "Nov"]
+            document.write("Array before slice : -  " + c)
+            document.write("<br>")
+
+            d = c.slice(1) //????
+            document.write("slice element : -  " + d)
+            document.write("<br>")
+            document.write("<hr>")
+
+            //13.some - it checks the conditions which returns true or false
+            var a3 = ["dfg", 23, 34, "gfh", 875, "UI designer", "software devp", "flutter"];
+            function check(a3) {
+                return (a3 == "UI des" || a3 == 25)
+            }
+
+            var ans = a3.some(check);
+            document.write(" <br>" + ans)
+            document.write("<hr>")
+
+            //14. find- it finds the element at the first location which statisfy the condition
+
+            var dfg = [5, 41, 7, 35, 4]
+            var s1 = dfg.find(function (value) {
+                return value > 3;
+            })
+            document.write("<br> Array " + dfg)
+            document.write("<br> The first value which is greater than 3 " + s1)
+
+
+            // var Array = [0, 1, 2, "kshfk", "ij"]
+            //         document.write( Array + "<br>")
+            //         //document.write("<br>")
+            //         var itr = Array.entries();
+
+            //         //for of loop
+            //         for (var x of itr) {
+            //             document.write(x + "<br>")
+            //         }
+
+            //         document.write("<br> array emp itrate <br>")
+            //         var em = [1, "hh", 9868]
+            //         for (var n1 of em.entries()) {
+            //             document.write(n1 + "<br>")
+            //         }
+
+            let a1 = [1, 2, 3, 4, 5]
+            a1.forEach(function (z) {
+                document.write("<br> " + z);
+            })
+            let sum = 0;
+            for (let i = 0; i < a1.length; i++) {
+                sum += a1[i];
+            }
+            document.write("<br> Sum of numbers 1-5 " + sum)
+
+            document.write("<br>")
+            var shift_element = a1.shift();
+            document.write("<br> <i> element removed by shift method : </i>" + "<b>" + shift_element + "</b>")
+            document.write("<br> <b> Array after shift method performed: </b>" + a1)
+
+            //splice
+
+            var a2 = ["UI designer", 554, "sjhff", 7253, "Google", "software devp", "flutter"]
+            var el = a2.splice(1, 0, "Ux Designer");
+            document.write("<br> <br> Array after adding <b>Ux Designer</b> at the <b>1st</b> location and by not removing any element from the array. <br> " + a2)
+
+            // a2.splice(4);
+            // document.write("<br> Removing elements after the 4th location :-  " + a2)
+
+            a2.splice(2, 3, "JP Morgan");
+            document.write("<br> Removing elements after the 2nd location :-  " + a2)
+
+
+
+
+        </script>
+
+
+    </body>
+
 </html>

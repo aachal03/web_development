@@ -1,48 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <h1>Object in java script</h1>
+
     <script>
-        m={ maths:20,
-            physics:"Fail",
-            chemistry:25}
-        document.write(m.maths + m.physics + m.chemistry);
-        document.write("<br> <br>")
-      emp={id:11,
-                       name:"meena",
-                       salary:3000,
-                       maths:25}
-           document.write("<br>" + emp.id +"<br>" + emp.name + emp.salary + emp.maths)  
 
-           //create instance of an object  
-           document.write("<br> <br>")
-           var person= new Object;
+      // create object "emp1"
+      let emp1 = {
+        id: 142,
+        name: "Kajal",
+        post: "UI designer",
+      };
+      document.write(
+        "<br> Emp details are <br>" +
+        "Name: " +
+        emp1.name +
+        "<br> ID: " +
+        emp1.id +
+        "<br> Post: " +
+        emp1.post
+      );
 
-           person.name="Aachal",
-           person.age=25,
-           person.number=485137,
-           person.education="B.tech Graduate"
+      m = { maths: 20, physics: "Fail", chemistry: 25 };
+      document.write(
+        "<br> <br> Report of subjects - " +
+        "<br> Maths: " +
+        m.maths +
+        "<br> Physics: " +
+        m.physics +
+        "<br> Chemistry: " +
+        m.chemistry
+      );
+      document.write("<br> <br>");
 
-           document.write(person.name + " is " + person.age + " years old. <br> Phone number: " + person.number + "<br> Education " + person.education)
-    
-           //constructor
+      emp = { id: 11, name: "meena", salary: 3000, maths: 25 };
+      document.write(
+        "<br>" + emp.id + "<br>" + emp.name + emp.salary + emp.maths
+      );
 
-           function emp(id, salary, name)
-           {
-            this.id=id,
-            this.salary=salary,
-            this.name=name
-           }
+      //create instance of an object
+      document.write("<br> <br>");
+      var person = new Object(); //"Object" is object constructor
 
-           e= new emp(5, 40599, "nisha")
-           document.write("<br>" + e.id + e.salary + e.name);
-    
+      (person.name = "Aachal"),
+        (person.age = 25),
+        (person.number = 485137),
+        (person.education = "B.tech Graduate");
+
+      document.write(person.name +" is " + person.age +" years old. <br> Phone number: " + person.number +"<br> Education " +person.education);
+      document.write("<br> <br> <hr>");
+
+      //fumction constructor, this 
+
+      //   function emp(id, salary, name) {
+      //     (this.id = id), (this.salary = salary), (this.name = name);
+      //   }
+
+      //   e = new emp(5, 40599, "nisha");
+      //   document.write("<br>" + e.id + e.salary + e.name);
+
+      function company(gst, name, address) {
+        this.gst_no = gst;
+        this.nam = name;
+        this.add = address;
+      }
+
+      comp = new company("DG5623", "Hans Des", "Shantinagar, pune");
+      document.write("<br>  " + comp.nam +"<br>"+ comp.gst_no + "<br>" + comp.add);
+
+      //   function employee(i,name,salary){
+      //                this.id =i;
+      //                this.name=name;
+      //                this.salary=salary
+      //          }
+
+      //          emp=new employee(111,"meena",3000);
+
+      //          e=new employee(111,"heena",3000);
+
+      //   document.write("id : "+ emp.id+" <br> Name: " + emp.name+"<br> Salary:" + emp.salary);
+
+      document.write("<br><br><hr>");
+
+      function empp(id, post, sal){
+        this.i=id; //right handside of this should be same as the function parameters, left handside should match 
+        this.post_name=post;
+        this.salary=sal;
+        this.changepost=changepost;
+          function changepost(change_post){
+            this.post=change_post;
+            console.log(change_post);
+          }
+      }
+
+      e2 = new empp("MH2873", "Jr. Developer", 47000);
+      document.write("<br> The current emp details are: " + e2.i + "  " + e2.post_name + "  " + e2.salary)
+
+      e2.changepost("Lead devp");
+      document.write("<br> The change of post for " + e2.i + " is " + e2.post);
     </script>
-</body>
+  </body>
+
 </html>

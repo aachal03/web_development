@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Default arrow function without return type
+      let add = () => {
+        document.write("<br> The addition of 2 numbers is " + (7 + 9));
+      };
+      add();
+      document.write("<br>");
+
+      //Default arrow function with return type
+      let sub = () => {
+        return document.write("<br> The subtraction is " + (121 - 50));
+      };
+      sub();
+      document.write("<br>");
+
+      //parameterized arrow function without return type
+      let div = (g, h) => {
+        document.write("<br> The division is " + g / h);
+      };
+      div(42, 2);
+      document.write("<br>");
+
+      //parameterized arrow function with return type
+      let mul = (x, y) => {
+        return document.write("<br> The multiplication is " + x * y);
+      };
+      mul(11, 50);
+    </script>
+  </body>
+</html>

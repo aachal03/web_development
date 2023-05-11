@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrow function</title>
+  </head>
+  <body>
+    <script>
+      //function expression without function name
+
+      let x = function () {
+        document.write("hello");
+      };
+      x();
+
+      //arrow function without return type
+      // let a=()=>console.log("<br> hydrogen is the first element ");
+
+      let y = () => {
+        document.write("<br> hydrogen is the first element ");
+      };
+      y();
+
+      //arrow function with return type
+      var z = () => {
+        return 2 + 3;
+      };
+      document.write("<br> " + z());
+
+      //parameterized arrow function without return type
+      let p1 = (x, y) => {
+        document.write("<br> subtrsction is " + (x - y));
+      };
+      p1(5, 4);
+
+      //parameterized arrow function with return type
+      let p2 = (a, b) => {
+        return a * b;
+      };
+      document.write("<br> multiplcation of 2 numbers is " + p2(6, 5)); //calling the function directly without assigning the function to an variable
+
+      //arrow function as a exprssion
+    </script>
+  </body>
+</html>
