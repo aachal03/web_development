@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+<script>
+     
+     //string declaration
+      var s1= "string declaration"
+      document.write("<h3> " + s1 + "</h3>")
+
+      //string declaration by new keyword (create object)
+      var s2 = new String("string declaration by new keyword (create object)")
+      document.write("<h3> " + s2 + "</h3>")
+      
+      //Length of string
+      document.write("<br> Length os string is " + s2.length)
+      var s3 = new String(" declaration object")
+      //indexof
+      document.write("<br> Index of 'by'  " + s2.indexOf('by' , 6))
+      document.write("<br> index of 'ec' " + s3.indexOf('e'))
+
+      //lastindexof
+      document.write("<br> Last index of 'c' " + s2.lastIndexOf('e'))
+
+      //upper case and lower case
+      document.write("<br> Upper case: - " + s3.toUpperCase());
+      var s4= new String("HELLOOOO")
+      document.write("<br> Lower case " + s4.toLocaleLowerCase())
+
+      //concat()- add to strings
+      document.write("<br> Concat 2 strings " + s3.concat(s4))
+
+      //trim()- removes whitespaces from start and end of a string
+      var s5= new String("  White House  ")
+      document.write("<br> Length of"  + "<i> " + s5 + "</i>" + "string :- " +s5.length)
+      s5=s5.trim()
+      document.write("<br> String after trim:-"  + "<i> " + s5 + "</i>" + "<br> length of trimed string :- " +s5.length)
+
+      //split()
+      document.write("<br> String split: " + s1.split(" , ")) 
+
+      //substring
+      document.write("<br> substring: " + s2.substring(5,17))
+</script>
+    </body>
+
+</html>
