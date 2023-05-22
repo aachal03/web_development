@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM-NEW-2</title>
+
+    <style>
+        p{
+            padding: 0px 40px 0px 40px;
+        }
+    </style>
+</head>
+<body>
+    
+   <form action="">
+    <input type="text" name="number" id="d1" placeholder="Enter a number">
+    <br><br>
+    <input type="submit" value="submit" onclick="square()">
+    <button onclick="square()">click</button>
+
+    <br><br>
+    <label for="male">Male</label>
+    <input type="radio" name="gender" value="male">
+    <label for="female">female</label>
+    <input type="radio" name="gender" value="female">
+    <input type="submit" name="" onclick="len()">
+
+    <h1 id="ans"></h1>
+
+    <br><br>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus molestias praesentium
+        quae similique nihil minima natus. Dignissimos velit vel eum ipsum tempora, aspernatur
+        nam nulla eligendi assumenda animi, explicabo sapiente?</p>
+
+    <p>Hello welcome</p>
+
+        <input type="submit" name="" onclick="count()">
+
+    <script>
+        function square(){
+            var num = document.getElementById("d1").value;
+            var answer = num * num;
+            alret(answer);
+           // document.write(answer)
+        }
+
+        function len(){
+            var total = document.getElementsByName("gender");
+            alert(" Count " + total.length)
+        }
+
+        function count(){
+            var total1 = document.getElementsByTagName("p");
+            alert(" Count " + total1.length)
+        }
+
+    </script>
+    
+   </form>
+</body>
+</html>

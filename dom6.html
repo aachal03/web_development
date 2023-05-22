@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Element by ClassName</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Get Element by ClassName</title>
+    </head>
 
-<body>
-    <p class="d1">First para`</p>
-    <p class="d1">Second para</p>
-    <p class="d1"> Third para</p>
-    
-    <h1 id="d2"></h1>
+    <body>
+        <p class="d1">First para`</p>
+        <p class="d1">Second para</p>
+        <p class="d1"> Third para</p>
 
-    <script>
-        let n1 = document.getElementsByClassName("d1");
+        <h1 id="d2"></h1>
 
-        document.getElementById("d2").innerHTML = "Hello " + n1[0].innerHTML;
+        <script>
+            let n1 = document.getElementsByClassName("d1");
 
-    </script>
+            document.getElementById("d2").innerHTML = "Hello " + n1[0].innerHTML;
 
-</body>
+        </script>
+
+    </body>
 
 </html>

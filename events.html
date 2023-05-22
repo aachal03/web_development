@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>EVENTS-DOM</title>
+        <!-- <style>
+        div{
+            background-color: peachpuff;
+        }
+    </style> -->
+    </head>
+
+    <body>
+        <div id="d1">
+            <h1 id="d2"
+                onclick="change()">This is an program to show events in DOM.</h1>
+        </div>
+
+        <script>
+            function change() {
+                var s1 = document.getElementById("d1");
+                var s2 = document.getElementById("d2");
+
+                s1.style.backgroundColor = "peachpuff"
+                s1.style.padding = "0px 20px 5px 35px"
+            }
+
+        </script>
+
+
+    </body>
+
+</html>
