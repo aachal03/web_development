@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            class emp1 {
+                data() {
+                    document.write("<br> Initilaize the value using this keyword ")
+
+                    this.id = 23;
+                    this.name = "Grace"
+                    this.post = "Special Agent"
+                    document.write("<br> Name: " + this.name + "<br> Id: " + this.id + "<br> Post: " + this.post)
+                }
+            }
+            var e1 = new emp1();
+            e1.data();
+
+            document.write("<hr>")
+            document.write("<b> Default consrtuctor </b>")
+            class emp2 {
+
+                //default consrtuctor
+                constructor() {
+                    document.write("<br> When class is called if there is a constructor declared then it is called by default. ")
+                    this.id = 27;
+                    this.name = "Dean"
+                    this.post = " FBI "
+                }
+
+                show() {
+                    document.write("<br> Name: " + this.name + "<br> Id: " + this.id + "<br> Post: " + this.post)
+                }
+            }
+
+            var e2 = new emp2();
+            e2.show();
+
+            document.write("<hr>")
+            document.write("<b> Parameterized consrtuctor </b>")
+            class emp3 {
+
+                //default consrtuctor
+                constructor(id, name, post) {
+                    document.write("<br> When class is called if there is a constructor declared then it is called by default. ")
+                    this.id = id;
+                    this.name = name
+                    this.post = post
+                }
+
+                show() {
+                    document.write("<br> Name: " + this.name + "<br> Id: " + this.id + "<br> Post: " + this.post)
+                }
+            }
+
+            var e3 = new emp3(24, "Sam" , "Police");
+            e3.show();
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+
+</html>
