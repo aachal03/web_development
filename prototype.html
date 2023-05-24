@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+            //prototype
+            function arthimetic(x, y) {
+                this.x = x;
+                this.y = y;
+            }
+
+            arthimetic.prototype.add = function () {
+                return (this.x + this.y);
+            }
+
+            arthimetic.prototype.mul = function () {
+                return (this.x * this.y)
+            }
+
+            arthimetic.prototype.sub = function(){
+                return (this.y - this.x);
+            }
+
+            var a1 = new arthimetic(4, 5);
+            document.write("addition is : " + a1.add() + "<br>")
+            document.write("multiplication is: " + a1.mul() + "<br>")
+            document.write("subtraction is: " + a1.sub() + "<br>")
+
+
+
+
+
+
+
+
+        </script>
+
+    </body>
+
+</html>

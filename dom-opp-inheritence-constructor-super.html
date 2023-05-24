@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <script>
+
+            //default constructor
+            class Shape {
+                constructor() {
+                    document.write("There are different types of shapes <br> ");
+                }
+            }
+
+            class Triangle extends Shape {
+                constructor() {
+                    super()
+                    document.write("This is Triangle ");
+                }
+            }
+
+            // var s1 = new Triangle();
+
+            //parametrized constructor
+            class Shape1 {
+                constructor(radius, side) {
+                    this.radius = radius;
+                    this.side = side;
+                    document.write("<br> Radius of circle is " + this.radius)
+                }
+            }
+
+            class circle extends Shape1 {
+                constructor(radius, side) {
+                    super(radius, side);
+                    var pi = 3.14;
+                    var a = this.radius * pi * this.radius;
+                    document.write("<br> The area is  " + a);
+                }
+            }
+
+            var s2 = new circle(5);
+
+            class square extends Shape1 {
+                constructor(r1, s1) {
+                    super(r1, s1);
+                    // var area = this.side * this.side;
+                    document.write("<br> Area of square  " + (this.side * this.side))
+                }
+            }
+
+            var s3 = new square(1, 4);
+
+        </script>
+    </body>
+
+</html>

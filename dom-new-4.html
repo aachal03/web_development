@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <input type="text" name="" id="d1" placeholder="enter num" onkeydown="show()" onmouseover="show1()">
 
-    <script>
-        var i = document.getElementById('d1');
-        function show(){
-            document.getElementById('d1').style.background="red";
-        }
-        function show1(){
-            document.getElementById('d1').style.background="blue";
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
 
-        //i.addEventListener('keydown', show)
+    <body>
+        <input type="text"
+            name=""
+            id="d1"
+            placeholder="enter num"
+            onkeydown="show()"
+            onmouseover="show1()">
 
-    </script>
-</body>
+        <script>
+            var i = document.getElementById('d1');
+            function show() {
+                document.getElementById('d1').style.background = "red";
+            }
+            function show1() {
+                document.getElementById('d1').style.background = "blue";
+            }
+
+            i.addEventListener('keydown', show)
+
+        </script>
+    </body>
+
 </html>
