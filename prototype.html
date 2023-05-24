@@ -12,12 +12,12 @@
 
     <body>
         <script>
-            //prototype
+            //fun prototype
             function arthimetic(x, y) {
                 this.x = x;
                 this.y = y;
             }
-
+            //cannot use arrow function becuase it does not work as a constructor 
             arthimetic.prototype.add = function () {
                 return (this.x + this.y);
             }
@@ -35,9 +35,24 @@
             document.write("multiplication is: " + a1.mul() + "<br>")
             document.write("subtraction is: " + a1.sub() + "<br>")
 
+            document.write("<hr>");
 
+            function emp(id, post){
+                this.id = id;
+                this.post = post;   
+            }
 
+            emp.prototype.age=45;
+            emp.prototype.salary=20500;
+            emp.prototype.det= function(){
+                return (this.id + " " + this.post + " " + this.age+ " "  + this.salary )
+            }
 
+            var e1 = new emp(23, "Technical Support")
+            document.write("Emp details are : " + e1.id + " " + e1.post + " " + e1.age + " " + e1.salary)
+            var e2 = new emp(145,"Associate Engineer")
+
+            document.write("<br> details are " + e2.det());
 
 
 

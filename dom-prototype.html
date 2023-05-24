@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <h1 id="d1"></h1>
+        <input type="text" name="" id="d2" placeholder="Enter id">
+        <h2 id="d3"></h2>
+        <script>
+
+            function emp(id, post){
+                this.id = id;
+                this.post = post;   
+            }
+
+            emp.prototype.age=45;
+            emp.prototype.salary=20500;
+            emp.prototype.det= function(){
+                document.getElementById('d2').innerHTML=this.id + " " + this.post + " " + this.age+ " "  + this.salary
+                //return (this.id + " " + this.post + " " + this.age+ " "  + this.salary )
+            }
+
+            emp.prototype.det1=function(){
+               var a1= document.getElementById('d3').innerHTML=this.id + " "
+            }
+
+            var e1 = new emp(23, "Technical Support")
+            // document.write("Emp details are : " + e1.id + " " + e1.post + " " + e1.age + " " + e1.salary)
+            // var e2 = new emp(145,"Associate Engineer")
+            // document.write("<br> details are " + e2.det());
+
+            e1.det();
+            e
+
+
+
+
+        </script>
+
+    </body>
+
+</html>
