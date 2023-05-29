@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class num{
+            disp_num(x,y){
+                this.x=x;
+                this.y=y;
+                document.write("The values are " + this.x + " " + this.y)
+            }
+        }
+
+        class add extends num{
+            disp_num(x,y){
+                //return ();
+                document.write("<br> addition is " + (x + y));
+            }
+        }
+
+        var n1 = [new num(4,5), new add(4,5)];
+        n1.forEach(function(i){
+            i.disp_num(4,5);
+        })
+
+        document.write("<hr>")
+
+        class A{
+            disp(){
+                document.write("This is class A");
+            }
+        }
+
+        class B extends A{
+            disp(){
+                document.write("<br> This is class B")
+            }
+        }
+
+        var b =[new A(), new B];
+        b.forEach(function(i){
+            i.disp();
+        })
+
+
+    </script>
+
+
+
+</body>
+</html>

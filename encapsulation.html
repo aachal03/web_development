@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+
+        <script>
+            class student {
+                constructor() { //the variables declared in class are private so they cannot be acessed outside the class.
+                    var name;
+                    var roll;
+                    var marks;
+                }
+                //To access these varibales get and set methods are used. 
+                getName() {
+                    return this.name;
+                }
+
+                getRoll() {
+                    return this.roll;
+                }
+
+                getMarks() {
+                    return this.marks;
+                }
+
+                setName(name) {
+                    this.name = name;
+                }
+
+                setRoll(roll) {
+                    this.roll = roll;
+                }
+
+                setMarks(marks) {
+                    //validate marks
+                    if (marks < 0 || marks > 100) {
+                        alert("Please check the Marks again")
+                        document.write("<br> Check marks again")
+                    } else {
+                        this.marks = marks;
+                    }
+                }
+            }
+
+            var s1 = new student();
+            s1.setName("Vanya")
+            s1.setRoll(43);
+            s1.setMarks(44);
+            document.write("The name of student is as : " + s1.getName() + " and Roll number is: " + s1.getRoll());
+            document.write("<br> The marks obtained are : " + s1.getMarks() + "<hr> ");
+
+            var s2 = new student();
+            s2.setName("Krish");
+            s2.setRoll(10);
+            
+            document.write("The name of student is as : " + s2.getName() + " and Roll number is: " + s2.getRoll());
+            s2.setMarks(202);
+            document.write("<br> The marks obtained are : " + s2.getMarks());
+
+
+
+        </script>
+
+
+    </body>
+
+</html>
