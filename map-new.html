@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Map</title>
+    </head>
+
+    <body>
+
+        <script>
+            var map = new Map();
+            document.write("the list of universisties for HCI is: <br>");
+            map.set(1, "Pace University")
+            map.set(2, "Indiana Perdue")
+            map.set(3, "Depaul University")
+            map.set(4, " Iowa State University")
+
+            var itr = map.entries();
+            document.write(itr.next().value + "<br>");
+            var itr2 = map.entries();
+            for (let i = 0; i < map.size; i++) {
+                document.write("<br> " + itr2.next().value);
+            }
+            document.write("<hr> ");
+            //foreach
+            var itr3 = map.entries();
+            function disp(value, key) {
+                document.write("<br> " + itr3.next().value);
+            }
+            map.forEach(disp);
+
+            document.write("<hr> ");
+
+            //foreach - anonymus fun
+            var itr4 = map.entries();
+            map.forEach(function (val, key) {
+                document.write("<br> " + itr4.next().value);
+            })
+            
+            document.write("<hr> ");
+            //foreach- arrow fun
+            var itr5 = map.entries();
+            map.forEach((val, key) => {
+                document.write("<br> " + itr5.next().value);
+            })
+            document.write("<hr> ");
+
+            
+        </script>
+
+    </body>
+
+</html>

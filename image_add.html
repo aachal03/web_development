@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Add your image here</h1>
+        <button onclick="addimg()">add</button>
+
+
+        <script>
+            function addimg() {
+                var x = document.createElement("img");
+                x.setAttribute("src", "/benjamin-child-6msS8vT5pzw-unsplash.jpg")
+                x.setAttribute("width", "500px")
+                x.setAttribute("height", "350px")
+                document.body.appendChild(x)
+
+            }
+
+        </script>
+    </body>
+
+</html>

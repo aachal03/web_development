@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Hello</h1>
+
+        <div id="d1"
+            style="background-color: aquamarine;">
+            <p id="p1"> Paragraph</p>
+            <p id="p2">P2</p>
+        </div>
+
+        <button onclick="show()"> Add</button>
+        <script>
+            function show() {
+                const tag = document.createElement("h3")
+                const text = document.createTextNode("My portfolio");
+
+                tag.appendChild(text);
+                const add = document.getElementById("d1");//parent element
+                const add1 = document.getElementById("p2");//child element
+                add.removeChild(add1);
+            }
+        </script>
+
+    </body>
+
+</html>
