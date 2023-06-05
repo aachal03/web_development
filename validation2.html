@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Validation form</h1>
+        <form action=""
+            name="myform"
+            onsubmit="return validate()">
+            <input type="text"
+                name="firstname"
+                placeholder="Enter your first name">
+            <br><br>
+            <input type="password"
+                name="password1"
+                placeholder="Enter your password">
+            <br><br>
+            <input type="password"
+                name="password2"
+                placeholder="Confirm yolur password">
+            <br><br>
+            <input type="submit"
+                value="Register">
+
+        </form>
+
+        <script>
+            function validate() {
+                var name = document.myform.firstname.value;
+                var pass1 = document.myform.password1.value;
+                var pass2 = document.myform.password2.value
+
+                if (name == null || name == "") {
+                    alert("This field cannot be blank")
+                    return false;
+                } else if (pass1.length < 6) {
+                    alert("This field should have min 6 char")
+                    return false;
+                } else if (pass1 == pass2) {
+                    return true;
+                } else {
+                    alert("The entered passwords should be same.")
+                }
+            }
+
+        </script>
+
+    </body>
+
+</html>
