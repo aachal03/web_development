@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Regular experssion</h1>
+
+        <script>
+            regex = /^hey/ //^ it used to check if any string is beginning with a particular string
+
+            let str = "hey, welcome to my class"
+            res = regex.exec(str)
+            console.log(res);
+
+            regex1 = /lass$/;
+            res1 = regex1.exec(str);
+            console.log(res1)
+
+            let str1 = " welcome Jane to my class"
+            r1 = /c.as/ //. used to match any one character
+            res1 = r1.exec(str1)
+            console.log(res1)
+
+            let str2 = " it is a sunny day"
+            r2 = /s*y/ //. used to match 0 or more character
+            res2 = r2.exec(str2)
+            console.log(res2)
+
+            r3 = /s?nny/
+            res3 = r3.exec(str2)
+            console.log(res3); //? the charater before the '?' are optional. Here u is optional
+
+            if (r3.test(str2)) {
+                console.log(`THE STRING ${str2} MATCHES THE EXP ${r3.source}`);
+            } else {
+                console.log(`THE STRING ${str2} DOESNT MATCH THE EXP ${r3 / source}`)
+            }
+        </script>
+    </body>
+
+</html>

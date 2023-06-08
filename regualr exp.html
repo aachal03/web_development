@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible"
+            content="IE=edge">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>Regular experssion</h1>
+
+        <script>
+            //this is a regular expression literal. 'g' is global flag, which is used to match the string returns the first match 
+
+            let str = /is/g;
+            //fun to match the expression
+            let s = "Lorem ipsum dolor sit, is consectetur is elit."
+
+            //exec() this is an inbuilt fun which will return an array if there is a match or else it will return null
+            let res = str.exec(s)
+           // let res1 = s.match(/IS/gi);
+            console.log(res)
+
+
+
+
+
+        </script>
+    </body>
+
+</html>
